@@ -2,7 +2,6 @@ package receipt
 
 import (
 	"context"
-	"fmt"
 	"math"
 	"strconv"
 	"strings"
@@ -109,7 +108,6 @@ func (rs *receiptService) getPointsForRetailerName(retailer string) int64 {
 func (rs *receiptService) getPointsForTotalRounded(total string) (int64, error) {
 	value, err := strconv.ParseFloat(total, 64)
 	if err != nil {
-		fmt.Println(err)
 		return 0, err
 	}
 
@@ -146,7 +144,6 @@ func (rs *receiptService) getPointsForItemsDescriptions(items []entity.Item) int
 		if len(description) > 0 && len(description)%3 == 0 {
 			itemPrice, _ := strconv.ParseFloat(items[i].Price, 64)
 			pricePoints := int64(math.Ceil(itemPrice * multpliyingFactorForItemsDescriptions))
-			fmt.Println(description, pricePoints)
 			points += pricePoints
 		}
 	}
