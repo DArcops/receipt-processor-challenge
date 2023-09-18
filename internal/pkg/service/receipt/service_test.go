@@ -7,34 +7,6 @@ import (
 	"github.com/darcops/receipt-proccessor-challenge/internal/pkg/entity"
 )
 
-// func TestCreateReceiptID(t *testing.T) {
-// 	testCases := []struct {
-// 		name    string
-// 		ctx     context.Context
-// 		service *receiptService
-
-// 		want string
-// 	}{
-// 		{
-// 			name:    "CreateReceiptID",
-// 			ctx:     context.Background(),
-// 			service: NewReceiptService(),
-
-// 			want: "1234567890",
-// 		},
-// 	}
-
-// 	for _, tc := range testCases {
-// 		t.Run(tc.name, func(t *testing.T) {
-// 			got := tc.service.CreateReceiptID(tc.ctx)
-
-// 			if got != tc.want {
-// 				t.Errorf("CreateReceiptID() = %v, want %v", got, tc.want)
-// 			}
-// 		})
-// 	}
-// }
-
 func TestGetReceiptPoints(t *testing.T) {
 	testCases := []struct {
 		name    string
