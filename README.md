@@ -17,20 +17,21 @@ project-root/
 │   │   │   ├── receipt/
 │   │   │   │   └── receipt_api.go
 │   │   │   │
-│   │   │   └── ...
+│   │   │   └── routes.go
+│   │   │   └── server.go
 │   │   │
 │   ├── pkg/
 │   │   ├── entity/
-│   │   │   ├── some_entity.go
+│   │   │   ├── receipt.go
 │   │   │   └── ...
 │   │   │
 │   │   ├── port/
-│   │   │   ├── usecase_port.go
+│   │   │   ├── receipt.go
 │   │   │   └── ...
 │   │   │
 │   │   ├── service/
-│   │   │   ├── some_service.go
-│   │   │   └── ...
+│   │   │   ├── receipt/
+│   │   │   └────── service.go
 │   │   │
 │   └── ...
 │
@@ -54,9 +55,9 @@ project-root/
 
     - service: Houses the application services (methods with the business logic).
 
-- mocks: Contains mock implementations for testing purposes mockery was used to automatically generate the mocks.
+- **mocks** : Contains mock implementations for testing purposes mockery was used to automatically generate the mocks.
 
-- util: Houses utility functions or packages. So far contains time functions to reuse in different parts of the code.
+- **util**: Houses utility functions or packages. So far contains time functions to reuse in different parts of the code.
 
 
 ## How to run it locally 
